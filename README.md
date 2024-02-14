@@ -25,7 +25,7 @@ func postContact(req: Request) -> NodeResponse {
   var contact = try req.content.decode(Contact.self)
 
   if exists(contact) {
-    return NodeResponse(node: contactExistsNode(), status: .unprocessableEntity)
+    return NodeResponse(node: contactExistsErrorNode(), status: .unprocessableEntity)
   }
 
   ....
