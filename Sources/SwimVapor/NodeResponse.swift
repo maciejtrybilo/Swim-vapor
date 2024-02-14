@@ -16,7 +16,7 @@ public struct NodeResponse: AsyncResponseEncodable {
         return .init(status: .ok, headers: headers, body: .init(string: node.render()))
     }
     
-    init(node: Node, status: HTTPStatus = .ok) {
+    public init(node: Node, status: HTTPStatus = .ok) {
         self.node = node
         self.status = status
     }
