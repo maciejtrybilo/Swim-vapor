@@ -1,6 +1,6 @@
 This micro library provides conveniences for using the Swim HTML DSL library with Vapor.
 
-== Usage
+### Usage
 `Node` is now `AsyncResponseEncodable`, so you can just return it from a route handler:
 ```
     func home(req: Request) -> Node {
